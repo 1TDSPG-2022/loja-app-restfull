@@ -24,12 +24,15 @@ public class ProdutoResource {
 
 	ProdutoBO pbo = new ProdutoBO();
 	
+	
+	//GET-ALL
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<ProdutoTO> buscar(){
 		return pbo.listar();
 	}
-	
+
+	//GET-ID
 	@GET
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
